@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Misty Peak Lodge | Sample hotel site by KITAAS</title>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--m:#dfe6e0;--p:#1f3d2e;--mo:#6f8f5b;--e:#e0803a;--b:#3b2f26}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{background:var(--m);color:var(--b);font:400 16px/1.7 Figtree,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Young Serif',serif;font-weight:400;line-height:1.05;color:var(--p)}a{color:inherit;text-decoration:none}
+header{position:fixed;inset:0 0 auto;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;transition:.4s}header.s{background:#dfe6e0ee;backdrop-filter:blur(10px);box-shadow:0 2px 20px #1f3d2e22}
+.lg{font:400 22px 'Young Serif';color:#fff}header.s .lg{color:var(--p)}header nav{display:flex;gap:26px;font-weight:600;font-size:14px;color:#fff}header.s nav{color:var(--p)}
+.bt{background:var(--e);color:#fff;border:0;border-radius:12px;padding:13px 26px;font:700 15px Figtree;cursor:pointer;transition:.3s;display:inline-block}.bt:hover{transform:translateY(-3px) rotate(-1deg);box-shadow:0 10px 24px #e0803a55}
+.hero{height:100vh;min-height:600px;position:relative;overflow:hidden;background:linear-gradient(#f3c99a,#dfe6e0 70%);transition:background 1.2s}.hero.rain{background:linear-gradient(#7a8a86,#b9c4bf 70%)}
+.hero svg{position:absolute;left:-5%;width:110%;bottom:0;height:80%;will-change:transform}
+.fg{position:absolute;width:140%;height:34%;left:-20%;background:radial-gradient(ellipse at center,#ffffffcc,#fff0 70%);filter:blur(24px);animation:dr 24s linear infinite}.fg:nth-of-type(2){top:46%;animation-duration:34s;animation-direction:reverse;opacity:.8}.fg:nth-of-type(3){top:62%;animation-duration:44s}.fg:nth-of-type(4){top:30%;animation-duration:50s;opacity:.6}
+@keyframes dr{from{transform:translateX(-12%)}to{transform:translateX(12%)}}
+.sun{position:absolute;width:150px;height:150px;border-radius:50%;background:#fff3d6;box-shadow:0 0 120px 40px #ffd89a;right:22%;top:18%;transition:.9s}.hero.rain .sun{opacity:0;transform:translateY(60px)}
+.rn{position:absolute;inset:0;opacity:0;transition:1s;background:repeating-linear-gradient(100deg,#fff0 0 14px,#ffffff55 15px 16px);animation:rain .5s linear infinite;pointer-events:none;z-index:4}.hero.rain .rn{opacity:.7}@keyframes rain{to{background-position:-30px 60px}}
+.ht{position:absolute;z-index:5;left:6vw;top:24vh;max-width:640px;color:#fff;text-shadow:0 2px 30px #1f3d2e66}.ht h1{font-size:clamp(46px,8vw,104px);color:#fff;animation:in 1.3s both}.ht p{margin:20px 0 28px;font-size:18px;animation:in 1.3s .3s both}.ht .bt{animation:in 1.3s .6s both;text-shadow:none}@keyframes in{from{opacity:0;transform:translateY(40px)}}
+.wx{position:absolute;z-index:6;right:5vw;bottom:5vh;background:#fff;border:0;border-radius:99px;padding:12px 22px;font:700 14px Figtree;color:var(--p);cursor:pointer;box-shadow:0 8px 24px #0003}
+section{padding:90px 6vw}h2{font-size:clamp(34px,5vw,60px);margin-bottom:12px}.ld{max-width:520px;margin-bottom:34px}
+.mp{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:start}.mp svg{width:100%;background:#cdd9cd;border-radius:24px}
+.cb{cursor:pointer;transition:.3s;transform-box:fill-box;transform-origin:center}.cb:hover{transform:scale(1.15)}.cb.sel{fill:var(--e)!important;animation:pl 1.4s infinite}.cb.bk{fill:#9aa59a;cursor:not-allowed}@keyframes pl{50%{transform:scale(1.2)}}
+.cd{background:#fff;border-radius:24px;padding:22px;box-shadow:0 14px 40px #1f3d2e22;position:sticky;top:90px}.cd img{width:100%;height:210px;object-fit:cover;border-radius:16px;margin-bottom:14px;background:var(--mo)}.cd h3{font-size:28px}.cd .pr{font:400 26px 'Young Serif';color:var(--e);margin:6px 0}
+.lg2{display:flex;gap:18px;font-size:13px;margin-top:12px}.lg2 i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px}
+.ac{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}.ac label{background:#fff;border-radius:18px;padding:22px;cursor:pointer;border:2px solid transparent;transition:.3s;display:block}.ac label:hover{transform:translateY(-6px)}.ac input{display:none}.ac input:checked+div{color:var(--e)}.ac label:has(input:checked){border-color:var(--e);background:#fff6ee}.ac h3{font-size:24px}.ac small{color:#6b786d}
+.sm{margin-top:34px;background:var(--p);color:#fff;border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}.sm b{font:400 40px 'Young Serif'}.sm input{width:70px;padding:8px;border-radius:8px;border:0;font:inherit}
+.ft{background:var(--p);color:#b9ccbb;text-align:center;padding:30px;font-size:13px}
+.tea{background:var(--p);color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0}.tea img{width:100%;height:100%;min-height:420px;object-fit:cover;background:var(--mo)}.tea div{padding:70px 6vw;align-self:center}.tea h2{color:#fff}
+.rvl{opacity:0;transform:translateY(34px);transition:1s}.rvl.in{opacity:1;transform:none}
+.back{position:fixed;left:14px;bottom:14px;z-index:40;background:#000;color:#fff;padding:8px 16px;border-radius:99px;font-size:13px}
+@media(max-width:850px){.mp,.tea{grid-template-columns:1fr}header nav{display:none}.cd{position:static}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rvl{opacity:1;transform:none}}
+</style></head><body>
+<header id="hd"><span class="lg">Misty Peak</span><nav><a href="#map">Cabins</a><a href="#do">Experiences</a><a href="#tea">The estate</a></nav></header>
+<div class="hero" id="hero"><div class="sun"></div>
+<svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" data-s=".05" style="z-index:1"><path fill="#a9bcae" d="M0 330 L150 200 L300 300 L470 120 L650 290 L820 170 L1000 300 L1200 190 V600 H0Z"/></svg>
+<div class="fg"></div>
+<svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" data-s=".12" style="z-index:2"><path fill="#7b9a82" d="M0 400 L120 300 L260 380 L420 240 L600 390 L760 280 L950 400 L1100 310 L1200 380 V600 H0Z"/></svg>
+<div class="fg"></div>
+<svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" data-s=".22" style="z-index:3"><path fill="#4d7358" d="M0 470 Q200 380 380 450 T760 440 T1200 430 V600 H0Z"/><g stroke="#3f6149" stroke-width="3" fill="none" opacity=".6"><path d="M0 500 Q300 440 600 500 T1200 480"/><path d="M0 530 Q300 480 600 530 T1200 510"/></g></svg>
+<div class="fg"></div><svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" data-s=".4" style="z-index:3;height:55%"><path fill="#1f3d2e" d="M0 520 Q250 470 520 520 T1200 500 V600 H0Z"/></svg><div class="fg" style="z-index:4"></div><div class="rn"></div>
+<div class="ht"><h1>Above the clouds, below the stars</h1><p>Eight timber cabins on a working tea estate, 1,900 metres up in Nuwara Eliya.</p><a class="bt" href="#map">Choose your cabin</a></div>
+<button class="wx" id="wx">Switch to a rainy morning</button></div>
+<section id="map"><h2 class="rvl">Pick a cabin on the map</h2><p class="ld rvl">Click a cabin to see photos and price. Grey cabins are already booked.</p>
+<div class="mp"><div><svg id="mv" viewBox="0 0 700 440"><g fill="none" stroke="#b5c6b5" stroke-width="2"><ellipse cx="350" cy="230" rx="320" ry="190"/><ellipse cx="350" cy="230" rx="230" ry="130"/><ellipse cx="350" cy="230" rx="130" ry="70"/></g><path d="M40 400 C200 300 300 380 420 260 S600 120 670 60" stroke="#fff" stroke-width="8" fill="none" stroke-dasharray="2 14" stroke-linecap="round"/><text x="60" y="425" font-size="14" fill="#4d6a55">Estate road</text></svg>
+<div class="lg2"><span><i style="background:var(--p)"></i>Available</span><span><i style="background:var(--e)"></i>Selected</span><span><i style="background:#9aa59a"></i>Booked</span></div></div>
+<div class="cd" id="cd"></div></div></section>
+<section class="tea" id="tea"><img src="https://loremflickr.com/1000/900/tea,plantation?lock=71" alt="Tea estate"><div class="rvl"><h2>Wake up inside a tea estate</h2><p style="margin-top:16px;color:#cfe0d1">Pick leaves at sunrise with our tea makers, watch them rolled and dried, and taste the first cup of the day in the factory.</p></div></section>
+<section id="do"><h2 class="rvl">Plan your days</h2><p class="ld rvl">Tick the experiences you want and we will fit them into your stay.</p><div class="ac" id="ac"></div>
+<div class="sm"><div>Nights <input type="number" id="nt" min="1" max="14" value="2"></div><div><small>ESTIMATED TOTAL</small><br><b id="tt"></b></div><a class="bt" id="bk" href="#">Send enquiry on WhatsApp</a></div></section>
+<div class="ft">Sample hotel website designed and built by KITAAS SOLUTIONS</div><a class="back" href="index.html">← All samples</a>
+<section id="x3" style="background:#16251c;color:#dfe6e0;padding:100px 6vw;position:relative;overflow:hidden"><canvas id="x3c" style="position:absolute;inset:0;width:100%;height:100%"></canvas><div style="position:relative;max-width:560px"><h2 style="color:#fff">Evenings at the lodge</h2><p>Light the stove, then make a wish on the first shooting star. Every cabin has its own fire.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><button class="bt" id="x3f">Light the stove</button><button class="bt" id="x3w" style="background:#3b2f26">Make a wish</button></div><p id="x3m" style="margin-top:18px;min-height:28px;color:#f3c99a;font-weight:600"></p></div>
+<svg viewBox="0 0 120 120" style="position:absolute;right:6vw;bottom:0;width:min(34vw,300px)"><path d="M10 120V60l50-40 50 40v60z" fill="#3b2f26"/><rect x="48" y="70" width="24" height="26" rx="3" fill="#2a2018"/><rect id="x3g" x="52" y="74" width="16" height="18" rx="2" fill="#e0803a" opacity="0" style="transition:.6s;filter:drop-shadow(0 0 10px #ff9a4a)"/></svg></div></section>
+<script>(()=>{const g=id=>document.getElementById(id),c=g('x3c'),x=c.getContext('2d'),S=Array.from({length:120},()=>[Math.random(),Math.random(),Math.random()*1.6+.3,Math.random()*9]);let sh=null,lit=0;
+g('x3f').onclick=()=>{lit=!lit;g('x3g').style.opacity=lit?1:0;g('x3f').textContent=lit?'Put it out':'Light the stove'};
+g('x3w').onclick=()=>{sh={x:Math.random()*.5+.3,y:.05,t:0};g('x3m').textContent=['Wish received. Sleep well.','A wish for a clear morning.','Tea is on at six.'][Math.random()*3|0]};
+function d(t){c.width=c.clientWidth;c.height=c.clientHeight;x.fillStyle='#0f1c14';x.fillRect(0,0,c.width,c.height);S.forEach(s=>{x.globalAlpha=.3+.7*Math.abs(Math.sin(t/900+s[3]));x.fillStyle='#fff';x.fillRect(s[0]*c.width,s[1]*c.height,s[2],s[2])});x.globalAlpha=1;
+if(sh){sh.t+=.02;const X=(sh.x-sh.t*.4)*c.width,Y=(sh.y+sh.t*.5)*c.height;x.strokeStyle='#fff';x.lineWidth=2;x.beginPath();x.moveTo(X,Y);x.lineTo(X+70,Y-45);x.stroke();if(sh.t>1)sh=null}
+if(lit){const r=g('x3g').getBoundingClientRect(),b=c.getBoundingClientRect(),f=.5+Math.random()*.2,gr=x.createRadialGradient(r.left-b.left+8,r.top-b.top+10,5,r.left-b.left+8,r.top-b.top+10,220*f);gr.addColorStop(0,'#ff9a4a66');gr.addColorStop(1,'#0000');x.fillStyle=gr;x.fillRect(0,0,c.width,c.height)}requestAnimationFrame(d)}requestAnimationFrame(d)})()</script>
+<script>
+const $=s=>document.getElementById(s);
+const C=[['Pine Nook',2,140,160,300,'Tucked among the pines, with a wood stove and a deep tub.',0],['Cloud View',2,160,420,170,'A glass wall faces the valley. Best for sunrise.',0],['Tea Row',4,220,300,260,'Two bedrooms beside the first tea terraces.',0],['Fern Hollow',2,130,150,150,'Quiet, private and warm, beside a small stream.',1],['Ridge House',6,340,520,300,'Our largest cabin, with a deck and a fire pit.',0],['Falls Lodge',3,190,600,170,'You can hear the waterfall from the bed.',1],['Hay Loft',2,120,250,380,'A cosy loft above the old tea store.',0],['Star Dome',2,260,570,360,'A glass dome for stargazing from bed.',0]];
+const EX=[['Tea trek at sunrise',25,'Three hours with a tea maker'],['Waterfall hike',20,'Guided, with a picnic breakfast'],['Stargazing night',30,'Telescopes and hot cocoa'],['Strawberry farm visit',15,'Pick your own and taste']];
+let sel=0,ex=new Set();
+const mv=$('mv');C.forEach((c,i)=>{mv.insertAdjacentHTML('beforeend',`<g><rect class="cb ${c[6]?'bk':''}" id="c${i}" x="${c[3]-22}" y="${c[4]-22}" width="44" height="44" rx="12" fill="#1f3d2e"/><text x="${c[3]}" y="${c[4]+5}" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" pointer-events="none">${i+1}</text></g>`);$('c'+i).onclick=()=>{if(!c[6])pick(i)}});
+function pick(i){document.querySelectorAll('.cb').forEach(e=>e.classList.remove('sel'));$('c'+i).classList.add('sel');sel=i;const c=C[i];$('cd').innerHTML=`<img src="https://loremflickr.com/700/420/cabin,forest?lock=${80+i}" alt="${c[0]}"><h3>${c[0]}</h3><p style="font-size:14px;color:#6b786d">Sleeps ${c[1]} · ${c[5]}</p><div class="pr">$${c[2]} <small style="font:14px Figtree">/ night</small></div><a class="bt" href="#do" style="margin-top:8px">Plan my stay</a>`;tot()}
+$('ac').innerHTML=EX.map((e,i)=>`<label><input type="checkbox" data-i="${i}"><div><h3>${e[0]}</h3><small>${e[2]}</small><br><b>$${e[1]} per person</b></div></label>`).join('');
+document.querySelectorAll('.ac input').forEach(e=>e.onchange=()=>{e.checked?ex.add(+e.dataset.i):ex.delete(+e.dataset.i);tot()});$('nt').oninput=tot;
+function tot(){const c=C[sel],n=+$('nt').value||1;let t=c[2]*n;ex.forEach(i=>t+=EX[i][1]*2);$('tt').textContent='$'+t;$('bk').href='https://wa.me/94758155175?text='+encodeURIComponent(`Hi Misty Peak, I would like ${c[0]} for ${n} nights${ex.size?' with: '+[...ex].map(i=>EX[i][0]).join(', '):''}. Estimate $${t}.`)}
+pick(0);
+const sv=[...document.querySelectorAll('.hero>svg')];addEventListener('scroll',()=>{$('hd').classList.toggle('s',scrollY>60);sv.forEach(s=>s.style.transform=`translateY(${-scrollY*(+s.dataset.s)}px)`)});
+$('wx').onclick=()=>{const r=$('hero').classList.toggle('rain');$('wx').textContent=r?'Switch to a sunny morning':'Switch to a rainy morning'};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});document.querySelectorAll('.rvl').forEach(e=>io.observe(e));
+</script></body></html>
