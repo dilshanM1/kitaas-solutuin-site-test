@@ -345,7 +345,15 @@ textarea{min-height:110px;resize:vertical}
 @media(max-width:1000px){.love-top,.love-ask{grid-template-columns:1fr;gap:50px}.love-ask{margin-top:70px}.love h2{max-width:none}}
 @media(max-width:520px){.love form .two{grid-template-columns:1fr}.love{padding:100px 0 90px}}
 @media(prefers-reduced-motion:reduce){.hearts i{animation:none;top:var(--y)}.couple img{transition:none}}
-.app.ei{background:linear-gradient(160deg,#8a0a22 -20%,#2b0a0a 72%)}.app.ei img{width:86%}.app h3{font-size:1.5rem;white-space:nowrap}.app p{min-height:6.4em}
+.app.ei{background:linear-gradient(160deg,#8a0a22 -20%,#2b0a0a 72%)}.app img{width:78%}.app.ei img{width:73%}.app h3{font-size:1.5rem;white-space:nowrap}.app p{min-height:6.4em}
+.vjb{display:block;position:relative;height:520px;background:#f3f7f3;color:#10321a;padding:20px 26px;overflow:hidden;text-decoration:none}
+.vjh{display:flex;align-items:center;gap:18px;margin-bottom:26px;font-size:.85rem;font-weight:600}.vjh img{height:40px;border-radius:6px;margin-right:auto}.vjh span:last-child{background:#0b8a15;color:#fff;padding:6px 14px;border-radius:99px}
+.vjb h4{font:800 clamp(1.4rem,2.6vw,2.2rem) var(--head);margin-bottom:16px;color:#0b5a12}
+.vjs{display:flex;background:#fff;border:2px solid #0b8a15;border-radius:14px;overflow:hidden;margin-bottom:20px;color:#6b8a6e}.vjs span{flex:1;padding:12px 16px}.vjs b{background:#0b8a15;color:#fff;padding:12px 24px}
+.vjr{display:flex;justify-content:space-between;align-items:center;background:#fff;border-left:5px solid #0b8a15;border-radius:10px;padding:12px 16px;margin-bottom:10px;box-shadow:0 4px 14px #0b8a1514}.vjr strong{display:block}.vjr small{color:#5b7a5f}.vjr em{font-style:normal;font-size:.75rem;font-weight:700;background:#dff3e0;color:#0b6a14;padding:3px 10px;border-radius:99px}
+.vjo{position:absolute;right:22px;bottom:18px;background:#10321a;color:#fff;padding:10px 20px;border-radius:99px;font-weight:600;font-size:.9rem}.vjb:hover .vjo{background:#0b8a15}
+@media(max-width:900px){.vjb{height:400px}.vjh span:not(:last-child){display:none}}
+.view iframe{opacity:1!important}
 </style>
 </head>
 <body>
@@ -451,11 +459,11 @@ textarea{min-height:110px;resize:vertical}
     <h3>Government and private sector jobs</h3>
     <p>A job posting website for Sri Lanka. People browse the latest government and private sector vacancies in one place, on any phone or computer.</p>
     <div class="chips"><span>Web design</span><span>Web development</span><span>Job listings</span></div>
-    <a class="btn fill" href="https://virakiyawa.com" target="_blank" rel="noopener">Visit live website</a>
+    <a class="btn fill" href="https://virakiyawa.com/" target="_blank" rel="noopener">Visit live website</a>
    </div>
    <div class="browser">
     <div class="bar"><i></i><i></i><i></i><span class="url">virakiyawa.com</span></div>
-    <iframe src="https://virakiyawa.com" title="virakiyawa.com live preview" loading="lazy"></iframe>
+    <iframe src="https://virakiyawa.com/" title="Virakiyava | විරැකියාව – Jobs in Sri Lanka" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
    </div>
   </div>
 
@@ -713,12 +721,12 @@ $('#yr').textContent=new Date().getFullYear();
  {f:'hotel-4.html',n:'Safari Camp Yala',k:'Safari camp',t:['Safari planner','Animated sunset','Live total']},
  {f:'hotel-5.html',n:'Lagoon Villas',k:'Private villas',t:['Sideways showcase','Live estimate','WhatsApp booking']}];
  const g=$('#smpGrid');
- g.innerHTML=D.map((d,i)=>`<article class="smp rv"><a class="shot" href="${d.f}" target="_blank" rel="noopener" aria-label="Open the ${d.n} demo in a new tab"><div class="bar"><i></i><i></i><i></i></div><div class="view" data-name="${d.n}"><iframe data-src="${d.f}" title="${d.n} preview" tabindex="-1" aria-hidden="true"></iframe></div><span class="open"><b>View live demo</b></span></a><div class="info"><h3>${d.n}</h3><p>${d.k}</p><ul class="tags">${d.t.map(x=>`<li>${x}</li>`).join('')}</ul><button class="want" data-i="${i}">Use this design</button></div></article>`).join('')
+ g.innerHTML=D.map((d,i)=>`<article class="smp rv"><a class="shot" href="${d.f}" target="_blank" rel="noopener" aria-label="Open the ${d.n} demo in a new tab"><div class="bar"><i></i><i></i><i></i></div><div class="view" data-name="${d.n}"><iframe src="${d.f}" data-src="${d.f}" title="${d.n} preview" tabindex="-1" aria-hidden="true"></iframe></div><span class="open"><b>View live demo</b></span></a><div class="info"><h3>${d.n}</h3><p>${d.k}</p><ul class="tags">${d.t.map(x=>`<li>${x}</li>`).join('')}</ul><button class="want" data-i="${i}">Use this design</button></div></article>`).join('')
  +`<article class="smp-cta rv"><img data-logo alt="Kitaas Solutions"><h3>Want something different?</h3><p>We also build custom websites for hotels, shops, restaurants and companies.</p><a class="btn fill" href="#contact">Tell us your idea</a></article>`;
  g.querySelectorAll('[data-logo]').forEach(i=>i.src=src);
  const fit=v=>v.style.setProperty('--s',v.clientWidth/1440);
  const ro=new ResizeObserver(es=>es.forEach(e=>fit(e.target)));
- const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const f=e.target.querySelector('iframe');f.onload=()=>f.classList.add('ok');setTimeout(()=>f.classList.add('ok'),1500);f.src=f.dataset.src;io2.unobserve(e.target);io.observe(e.target.closest('.rv'))}}),{rootMargin:'400px'});
+ const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const f=e.target.querySelector('iframe');f.onload=()=>f.classList.add('ok');if(!f.getAttribute('src'))f.src=f.dataset.src;io2.unobserve(e.target);io.observe(e.target.closest('.rv'))}}),{rootMargin:'400px'});
  g.querySelectorAll('.view').forEach(v=>{fit(v);ro.observe(v);io2.observe(v)});
  g.querySelectorAll('.rv').forEach(e=>io.observe(e));
  g.addEventListener('click',e=>{const b=e.target.closest('.want');if(!b)return;
